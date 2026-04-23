@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "eyebrow": "Portfolio risk dashboard",
+    "title": "Rebalance Review",
+    "subhead": "A cleaner, PM-style view of current concentration, hidden factor overlap, and a proposed rebalance built for upside participation with tighter risk control.",
+    "metrics": [
+      { "label": "Current visible top-5 concentration", "value": "61.7%" },
+      { "label": "Largest single-name risk", "value": "9988.HK at 21.8%" },
+      { "label": "Core rebalance stance", "value": "Trim concentration, keep offense" }
+    ]
+  },
+  "summary": [
+    "Single-name and regional concentration are too high for the portfolio’s stated drawdown-control objective.",
+    "Line-item count overstates diversification: AI/growth and China/HK exposures are more correlated than they look.",
+    "Defensive ballast exists, but not at a size that materially changes portfolio behavior in a risk-off tape.",
+    "The right move is not broad de-risking. It is a risk-budget reset toward higher-quality offense, less clutter, and better ballast."
+  ],
+  "stance": {
+    "recommendation": "Yes, rebalance now",
+    "body": "Not because of a hard bearish macro call. Because the current book has too much correlated factor exposure, too much capital in lower-efficiency positions, and not enough stabilizers relative to the cyclicality you’re carrying."
+  },
+  "holdings": [
+    { "name": "9988.HK", "weight": 21.84, "bucket": "China / HK", "action": "trim", "target": 9, "rationale": "Too large for a single China internet name in a mixed global book." },
+    { "name": "2800.HK", "weight": 12.86, "bucket": "China / HK", "action": "trim", "target": 5, "rationale": "Useful beta if intentional, but redundant at this size alongside 9988 and 9698." },
+    { "name": "TSLA", "weight": 10.88, "bucket": "US AI / growth", "action": "exit", "target": 0, "rationale": "Too much volatility and narrative fragility for a double-digit weight." },
+    { "name": "MU", "weight": 9.03, "bucket": "US AI / growth", "action": "trim", "target": 6, "rationale": "Keep cyclical memory exposure, but at a less aggressive size." },
+    { "name": "SPY", "weight": 7.11, "bucket": "Broad beta", "action": "keep", "target": 12, "rationale": "Use one broad index as the clean core beta sleeve." },
+    { "name": "9698.HK", "weight": 5.61, "bucket": "China / HK", "action": "trim", "target": 3, "rationale": "Keep only as smaller tactical China/AI infra torque." },
+    { "name": "MSFT", "weight": 5.24, "bucket": "US AI / growth", "action": "add", "target": 12, "rationale": "High-quality compounder and cleaner AI exposure than lower-quality alternatives." },
+    { "name": "ETN", "weight": 5.12, "bucket": "US AI / growth", "action": "add", "target": 8, "rationale": "High-quality capex / electrification / infrastructure beneficiary." },
+    { "name": "1816.HK", "weight": 4.33, "bucket": "China / HK", "action": "keep", "target": 3, "rationale": "Defensive-ish China sleeve exposure, but keep modest." },
+    { "name": "INTC", "weight": 3.68, "bucket": "Optionality / clutter", "action": "exit", "target": 0, "rationale": "Optionality exists, but weak use of scarce risk budget versus better names." },
+    { "name": "GLD", "weight": 3.30, "bucket": "Ballast", "action": "add", "target": 8, "rationale": "Real macro ballast that can change portfolio behavior in a risk-off tape." },
+    { "name": "AAPL", "weight": 2.72, "bucket": "US AI / growth", "action": "keep", "target": 6, "rationale": "Useful quality stabilizer inside the tech sleeve." },
+    { "name": "XLU", "weight": 2.29, "bucket": "Ballast", "action": "add", "target": 7, "rationale": "Raise the defensive sleeve to a size that matters." },
+    { "name": "NVDA", "weight": 2.03, "bucket": "US AI / growth", "action": "add", "target": 8, "rationale": "Keep offensive exposure concentrated in higher-quality winners." },
+    { "name": "LNG", "weight": 1.90, "bucket": "Ballast", "action": "keep", "target": 4, "rationale": "Adds macro diversification, but should not dominate the book." },
+    { "name": "DXYZ", "weight": 1.26, "bucket": "Optionality / clutter", "action": "exit", "target": 0, "rationale": "Low-efficiency risk; remove clutter." },
+    { "name": "VOO", "weight": 0.78, "bucket": "Broad beta", "action": "exit", "target": 0, "rationale": "Duplicate of the intended US broad-beta role." },
+    { "name": "NOK", "weight": 0, "bucket": "US AI / growth", "action": "add", "target": 3, "rationale": "Tactical rerating sleeve only, not a core holding." },
+    { "name": "Cash / dry powder", "weight": 0, "bucket": "Ballast", "action": "add", "target": 6, "rationale": "Keep flexibility to add on confirmation instead of chasing first spikes." }
+  ],
+  "bucketDescriptions": {
+    "US AI / growth": "High upside sleeve. Keep it focused on the cleanest expressions of AI / quality growth, not every exciting story.",
+    "China / HK": "Meaningful upside potential, but position sizing must respect policy, sentiment, and geopolitical discount risk.",
+    "Ballast": "This sleeve exists to materially change outcomes in a wobble, not just look diversified on paper.",
+    "Optionality / clutter": "Lowest-efficiency risk budget. These positions tend to add noise more than portfolio quality.",
+    "Broad beta": "One clean core market exposure is enough. Duplication is not sophistication."
+  },
+  "currentBuckets": {
+    "US AI / growth": 35.02,
+    "China / HK": 44.64,
+    "Ballast": 7.49,
+    "Optionality / clutter": 4.94,
+    "Broad beta": 7.89
+  },
+  "targetBuckets": {
+    "US AI / growth": 43,
+    "China / HK": 20,
+    "Ballast": 25,
+    "Optionality / clutter": 0,
+    "Broad beta": 12
+  },
+  "rules": [
+    "No non-elite single name above 10%.",
+    "No single regional sleeve above 25% without explicit top-down intent.",
+    "Tactical / rerating names capped at 3–5%.",
+    "Speculative names capped at 0–2%.",
+    "Ballast sleeve should be large enough to alter outcomes, not just optics.",
+    "One broad US beta instrument only."
+  ],
+  "deployment": [
+    "Upgrade toward higher-quality offense: MSFT, NVDA, ETN, one broad index.",
+    "Keep a meaningful China sleeve, but bring it back into a defensible range.",
+    "Increase GLD and XLU enough to matter.",
+    "If adding NOK, treat it as a 3% tactical rerating sleeve, not a core position."
+  ]
+}
