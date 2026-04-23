@@ -232,5 +232,134 @@ td { font-size: 14px; }
   .hero, .two-up, .three-up, .bucket-grid {
     grid-template-columns: 1fr;
   }
-  .shell { width: min(100vw - 20px, 1280px); padding-top: 20px; }
+  .shell {
+    width: min(100vw - 20px, 1280px);
+    padding-top: 20px;
+  }
+  .panel, .hero-card {
+    padding: 16px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+  }
+
+  .shell {
+    width: calc(100vw - 16px);
+    padding: 14px 0 28px;
+  }
+
+  .hero {
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 1.05;
+  }
+
+  .subhead {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  main, .grid {
+    gap: 14px;
+  }
+
+  .panel {
+    padding: 14px;
+  }
+
+  .panel-head {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 12px;
+  }
+
+  .metric {
+    padding: 12px;
+  }
+
+  .metric strong {
+    font-size: 16px;
+  }
+
+  .stance-value {
+    font-size: 24px;
+  }
+
+  .bucket-card {
+    padding: 14px;
+  }
+
+  .bucket-metrics {
+    flex-direction: column;
+  }
+
+  .small-panel {
+    min-height: auto;
+  }
+
+  .table-wrap {
+    overflow: visible;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  table {
+    min-width: 0;
+  }
+
+  tbody {
+    display: grid;
+    gap: 12px;
+  }
+
+  tr {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 12px;
+    background: rgba(255,255,255,0.03);
+  }
+
+  td {
+    border: 0;
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  td::before {
+    content: attr(data-label);
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+
+  td:first-child::before {
+    margin-bottom: 6px;
+  }
+
+  .bar-track {
+    height: 10px;
+  }
 }

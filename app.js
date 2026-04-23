@@ -97,11 +97,11 @@ function renderTable(holdings) {
     .map(
       (h) => `
         <tr>
-          <td><strong>${h.name}</strong><br /><span style="color: var(--muted); font-size: 12px;">${h.bucket}</span></td>
-          <td>${h.weight ? h.weight.toFixed(2) + '%' : '—'}</td>
-          <td>${h.target ? h.target.toFixed(2) + '%' : '0.00%'}</td>
-          <td><span class="action-pill ${actionClass(h.action)}">${actionLabel(h.action)}</span></td>
-          <td>${h.rationale}</td>
+          <td data-label="Holding"><strong>${h.name}</strong><br /><span style="color: var(--muted); font-size: 12px;">${h.bucket}</span></td>
+          <td data-label="Current %">${h.weight ? h.weight.toFixed(2) + '%' : '—'}</td>
+          <td data-label="Target %">${h.target ? h.target.toFixed(2) + '%' : '0.00%'}</td>
+          <td data-label="Action"><span class="action-pill ${actionClass(h.action)}">${actionLabel(h.action)}</span></td>
+          <td data-label="Rationale">${h.rationale}</td>
         </tr>
       `
     )
