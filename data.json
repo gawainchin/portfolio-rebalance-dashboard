@@ -74,5 +74,70 @@
     "Keep a meaningful China sleeve, but bring it back into a defensible range.",
     "Increase GLD and XLU enough to matter.",
     "If adding NOK, treat it as a 3% tactical rerating sleeve, not a core position."
+  ],
+  "scenarioMap": [
+    {
+      "name": "China / HK risk-off shock",
+      "drawdown": "-10% to -17%",
+      "trigger": "Policy disappointment, weaker China growth, geopolitical escalation, foreign-flow de-risking.",
+      "bucketMoves": [
+        "China / HK: -20% to -30%",
+        "US AI / growth: -3% to -8%",
+        "Broad beta: -5% to -8%",
+        "Ballast: +2% to +6%",
+        "Optionality / clutter: -8% to -15%"
+      ],
+      "damage": "Main damage source: 9988.HK, 2800.HK, 9698.HK. Your China sleeve is big enough to drive portfolio behavior by itself."
+    },
+    {
+      "name": "US rates spike / growth multiple compression",
+      "drawdown": "-8% to -15%",
+      "trigger": "Hotter inflation, hawkish repricing, or a sharp move higher in real yields.",
+      "bucketMoves": [
+        "US AI / growth: -15% to -25%",
+        "Broad beta: -8% to -12%",
+        "China / HK: -5% to -10%",
+        "Ballast: +3% to +8%",
+        "Optionality / clutter: -10% to -20%"
+      ],
+      "damage": "Main damage source: TSLA, MU, NVDA, MSFT, AAPL. Ballast helps, but the growth sleeve remains highly rate-sensitive."
+    },
+    {
+      "name": "AI capex disappointment",
+      "drawdown": "-8% to -16%",
+      "trigger": "Hyperscaler capex moderation, weaker AI demand guide, or less tolerance for AI-adjacent rerating stories.",
+      "bucketMoves": [
+        "US AI / growth: -18% to -30%",
+        "Broad beta: -5% to -10%",
+        "China / HK: -3% to -8%",
+        "Ballast: flat to +4%",
+        "Optionality / clutter: -10% to -18%"
+      ],
+      "damage": "Main damage source: MU, NVDA, TSLA, ETN. This hurts the offensive sleeve even if the broader market stays only mildly weak."
+    },
+    {
+      "name": "Broad equity risk-off / recession scare",
+      "drawdown": "-12% to -22%",
+      "trigger": "Credit stress, global growth scare, or a general de-risking across equities.",
+      "bucketMoves": [
+        "China / HK: -15% to -25%",
+        "US AI / growth: -15% to -25%",
+        "Broad beta: -10% to -15%",
+        "Ballast: +4% to +10%",
+        "Optionality / clutter: -12% to -20%"
+      ],
+      "damage": "Main damage source: hidden cross-correlation. This is where line-item diversification stops helping much."
+    },
+    {
+      "name": "Single-name event shock",
+      "drawdown": "~ -2% to -6% per event",
+      "trigger": "Stock-specific derating in a top position.",
+      "bucketMoves": [
+        "9988.HK down 25%: portfolio impact about -5.5%",
+        "TSLA down 30%: portfolio impact about -3.3%",
+        "MU down 25%: portfolio impact about -2.3%"
+      ],
+      "damage": "Main damage source: oversized positions. This is the cleanest argument for trimming concentration before the next surprise arrives."
+    }
   ]
 }

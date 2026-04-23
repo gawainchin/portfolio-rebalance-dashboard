@@ -122,6 +122,25 @@ function renderSimpleList(selector, items) {
   document.querySelector(selector).innerHTML = items.map((item) => `<li>${item}</li>`).join('');
 }
 
+function renderScenarioMap(items) {
+  const container = document.getElementById('scenarioMap');
+  container.innerHTML = items
+    .map(
+      (item) => `
+        <article class="scenario-card">
+          <h3>${item.name}</h3>
+          <div class="scenario-drawdown">Expected drawdown: ${item.drawdown}</div>
+          <p><strong>Trigger:</strong> ${item.trigger}</p>
+          <ul>
+            ${item.bucketMoves.map((move) => `<li>${move}</li>`).join('')}
+          </ul>
+          <p>${item.damage}</p>
+        </article>
+      `
+    )
+    .join('');
+}
+
 async function init() {
   const response = await fetch('./data.json');
   const data = await response.json();
@@ -134,6 +153,7 @@ async function init() {
   renderBuckets(data.bucketDescriptions, data.currentBuckets, data.targetBuckets);
   renderTable(data.holdings);
   renderLists(data.holdings);
+  renderScenarioMap(data.scenarioMap);
   renderSimpleList('#rulesList', data.rules);
   renderSimpleList('#deploymentList', data.deployment);
 }
